@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Realtime Location Tracker</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+</head>
+<body>
+    <div id="map-container">
+        <div id="map"></div>
+        <div id="sidebar">
+            <h2>Locations</h2>
+            <div id="locations"></div>
+            <button id="start-btn">Start Simulation</button>
+            <button id="stop-btn">Stop Simulation</button>
+            <button id="reset-btn">Reset Positions</button>
+            <div id="collision-log"></div>
+        </div>
+    </div>
+
+    <div id="customContextMenu" class="custom-context-menu">
+        <ul>
+            <li id="addDroneOption">Add Drone</li>
+        </ul>
+    </div>
+
+    <div id="addDroneModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Add Drone</h2>
+            <label for="droneSpeed">Speed:</label>
+            <input type="number" id="droneSpeed" name="droneSpeed">
+            <br>
+            <label for="droneDirection">Direction (0-360 degrees):</label>
+            <input type="number" id="droneDirection" name="droneDirection">
+            <br>
+            <button id="addDroneBtn">Add Drone</button>
+        </div>
+    </div>
+
+    <div id="root"></div>
+
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="dist/bundle.js"></script>
+</body>
+</html>

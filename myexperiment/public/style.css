@@ -1,0 +1,183 @@
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f4;
+}
+
+/* Map Container */
+#map-container {
+    display: flex;
+    height: 100vh;
+}
+
+/* Map Styles */
+#map {
+    flex: 1;
+    height: 100vh;
+}
+
+/* Sidebar Styles */
+/* Sidebar Styles */
+#sidebar {
+    width: 320px;
+    background: linear-gradient(135deg, #e9f7e9, #d4f0d4); /* Light Green to Mint */
+    border-left: 1px solid #ddd;
+    padding: 20px;
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+}
+
+
+/* Sidebar Header */
+#sidebar h2 {
+    margin-top: 0;
+    color: #333;
+    font-size: 1.5em;
+    font-weight: 600;
+}
+
+/* Location Items */
+#locations {
+    margin-bottom: 20px;
+}
+
+/* Location Item Styles */
+.location-item {
+    cursor: pointer;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #fafafa;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.location-item:hover {
+    background-color: #f0f0f0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.selected {
+    background-color: #b8daff;
+}
+
+/* Button Styles */
+button {
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+    padding: 12px;
+    background: linear-gradient(145deg, #5c6ac4, #4a5aa4);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+    background: linear-gradient(145deg, #4a5aa4, #3a497b);
+}
+
+/* Collision Log Styles */
+#collision-log {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Collision Marker Styles */
+.collision-marker {
+    filter: brightness(60%);
+}
+
+/* Collision Log Item Styles */
+.collision-log-item {
+    margin-bottom: 8px;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ffcccc;
+    border-radius: 8px;
+    color: #ff0000;
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding-top: 60px;
+    transition: opacity 0.3s ease;
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.close {
+    color: #888;
+    float: right;
+    font-size: 24px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Custom Context Menu */
+.custom-context-menu {
+    display: none;
+    position: absolute;
+    z-index: 1000;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.custom-context-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.custom-context-menu ul li {
+    padding: 12px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.custom-context-menu ul li:hover {
+    background-color: #f0f0f0;
+}
